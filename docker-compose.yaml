@@ -1,0 +1,13 @@
+services:
+  mysql:
+    image: mysql:8-debian
+    container_name: mysql-nader-container
+    volumes:
+      - ./db_setup.sql:/docker-entrypoint-initdb.d/db_setup.sql
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+      MYSQL_DATABASE: greenmenu
+    ports:
+      - "3306:3306"

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.UpdateRestaurantController">
+   <children>
+   
+   <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="633.0" prefWidth="749.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+      <children>
+         <Label layoutX="207.0" layoutY="29.0" text="Welcom , Max" textFill="#0a6b33">
+            <font>
+               <Font size="23.0" />
+            </font>
+            </Label>
+         <Label layoutX="581.0" layoutY="20.0" text="Max" />
+         <Label layoutX="578.0" layoutY="45.0" text="Manager" textFill="#867878" />
+         <Separator layoutX="569.0" layoutY="20.0" orientation="VERTICAL" prefHeight="52.0" prefWidth="7.0" />
+         <ImageView fitHeight="23.0" fitWidth="20.0" layoutX="536.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@images/bouton-notifications.png" />
+            </image>
+         </ImageView>
+         <ImageView fitHeight="52.0" fitWidth="54.0" layoutX="646.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@images/manager.png" />
+            </image>
+         </ImageView>
+         <Label layoutX="225.0" layoutY="225.0" text="Address" />
+         <Label layoutX="225.0" layoutY="280.0" text="Description" />
+         <Button fx:id="save" layoutX="488.0" layoutY="516.0" onAction="#saveupdate" prefHeight="40.0" prefWidth="99.0" style="-fx-background-color: #00796b;" styleClass="update_button" text="Save">
+            <font>
+               <Font size="14.0" />
+            </font>
+            <HBox.margin>
+               <Insets left="10.0" right="30.0" />
+            </HBox.margin>
+         </Button>
+         <Label layoutX="224.0" layoutY="169.0" text="Restaurant Name" />
+         <TextField fx:id="nameid" layoutX="223.0" layoutY="194.0" onAction="#typename" />
+         <TextField fx:id="addressid" layoutX="225.0" layoutY="247.0" onAction="#typeaddress" />
+         <Text fill="#686868" layoutX="287.0" layoutY="151.0" text="/ Manage Restaurants">
+            <font>
+               <Font name="Trebuchet MS" size="15.0" />
+            </font>
+         </Text>
+         <Text layoutX="227.0" layoutY="150.0" text="Manager" wrappingWidth="201.92578125">
+            <font>
+               <Font name="Trebuchet MS" size="15.0" />
+            </font>
+         </Text>
+         <Text fill="#686868" layoutX="227.0" layoutY="128.0" styleClass="main_title" text="Restaurants">
+            <font>
+               <Font name="Trebuchet MS" size="30.0" />
+            </font>
+         </Text>
+         <Button fx:id="cancelall" layoutX="278.0" layoutY="517.0" onAction="#cancel" prefHeight="40.0" prefWidth="99.0" style="-fx-background-color: #e91e63;" styleClass="save_button" text="Cancel">
+            <font>
+               <Font size="14.0" />
+            </font>
+         </Button>
+            <AnchorPane layoutX="-1.0" prefHeight="633.0" prefWidth="187.0" style="-fx-background-color: #00796b;">
+               <children>
+                  <ImageView fitHeight="80.0" fitWidth="124.0" layoutX="61.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/logo-no-background.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="65.0" layoutY="128.0" textFill="WHITE" />
+                  <Label layoutX="65.0" layoutY="166.0" textFill="#82391a" />
+                  <ImageView fitHeight="31.0" fitWidth="41.0" layoutX="20.0" layoutY="123.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/icons8-macbook-de-performance-100.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="68.0" layoutY="208.0" textFill="WHITE" />
+                  <ImageView fitHeight="30.0" fitWidth="31.0" layoutX="21.0" layoutY="204.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/iconizer-livre-de-recettes.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="68.0" layoutY="251.0" textFill="WHITE" />
+                  <ImageView fitHeight="31.0" fitWidth="37.0" layoutX="21.0" layoutY="246.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/icons8-restaurant-64.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="68.0" layoutY="295.0" textFill="WHITE" />
+                  <ImageView fitHeight="31.0" fitWidth="35.0" layoutX="21.0" layoutY="283.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/iconizer-don.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="30.0" fitWidth="35.0" layoutX="18.0" layoutY="547.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/icons8-sortie-100.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="66.0" layoutY="551.0" textFill="WHITE" />
+                  <Button fx:id="dashboardbut" layoutX="70.0" layoutY="123.0" mnemonicParsing="false" onAction="#gotodashboard" style="-fx-background-color: #00796b;" stylesheets="" text="Dashboard" textFill="WHITE" />
+                  <Button fx:id="usersbut" layoutX="74.0" layoutY="161.0" mnemonicParsing="false" onAction="#gotousers" style="-fx-background-color: #00796b;" text="Users" textFill="WHITE" />
+                  <Button fx:id="recipesbut" layoutX="75.0" layoutY="204.0" mnemonicParsing="false" onAction="#gotorecipes" style="-fx-background-color: #00796b;" text="Recipes" textFill="WHITE" />
+                  <Button fx:id="restaubut" layoutX="71.0" layoutY="246.0" mnemonicParsing="false" onAction="#gotorestau" style="-fx-background-color: #00796b;" text="Restaurants" textFill="WHITE" />
+                  <Button fx:id="campaignbut" layoutX="73.0" layoutY="283.0" mnemonicParsing="false" onAction="#gotocampaign" style="-fx-background-color: #00796b;" text="Campaign" textFill="WHITE" />
+                  <Button fx:id="logoutbut" layoutX="61.0" layoutY="547.0" mnemonicParsing="false" onAction="#gotologin" style="-fx-background-color: #00796b;" text="Log Out" textFill="WHITE" />
+                  <ImageView fitHeight="30.0" fitWidth="39.0" layoutX="21.0" layoutY="161.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/icons8-utilisateur-50.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <TextArea fx:id="descid" layoutX="228.0" layoutY="301.0" prefHeight="135.0" prefWidth="187.0" />
+      </children>
+   </AnchorPane>
+      <Button fx:id="updateimage" layoutX="488.0" layoutY="394.0" onAction="#uploadUpdatedimage" prefHeight="40.0" prefWidth="187.0" style="-fx-background-color: #00796b;" styleClass="update_button" text="Upload Image">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="imageUpdated" fitHeight="187.0" fitWidth="187.0" layoutX="486.0" layoutY="197.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>

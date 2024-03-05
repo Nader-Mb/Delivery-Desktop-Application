@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<StackPane fx:id="stack" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.HomeRestaurantController">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="600.0">
+         <children>
+         
+         <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="633.0" prefWidth="749.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+            <children>
+               <AnchorPane prefHeight="633.0" prefWidth="187.0" style="-fx-background-color: #00796b;">
+                  <children>
+                     <ImageView fitHeight="80.0" fitWidth="124.0" layoutX="61.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@images/logo-no-background.png" />
+                        </image>
+                     </ImageView>
+                     <Label layoutX="65.0" layoutY="128.0" textFill="WHITE" />
+                     <Label layoutX="65.0" layoutY="166.0" textFill="#82391a" />
+                     <ImageView fitHeight="31.0" fitWidth="41.0" layoutX="20.0" layoutY="123.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@images/icons8-macbook-de-performance-100.png" />
+                        </image>
+                     </ImageView>
+                     <Label layoutX="68.0" layoutY="208.0" textFill="WHITE" />
+                     <ImageView fitHeight="30.0" fitWidth="31.0" layoutX="21.0" layoutY="204.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@images/iconizer-livre-de-recettes.png" />
+                        </image>
+                     </ImageView>
+                     <Label layoutX="68.0" layoutY="251.0" textFill="WHITE" />
+                     <ImageView fitHeight="31.0" fitWidth="37.0" layoutX="21.0" layoutY="246.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@images/icons8-restaurant-64.png" />
+                        </image>
+                     </ImageView>
+                     <Label layoutX="68.0" layoutY="295.0" textFill="WHITE" />
+                     <ImageView fitHeight="31.0" fitWidth="35.0" layoutX="21.0" layoutY="283.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@images/iconizer-don.png" />
+                        </image>
+                     </ImageView>
+                     <ImageView fitHeight="30.0" fitWidth="35.0" layoutX="18.0" layoutY="547.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@images/icons8-sortie-100.png" />
+                        </image>
+                     </ImageView>
+                     <Label layoutX="66.0" layoutY="551.0" textFill="WHITE" />
+                     <Button fx:id="dashboardbut" layoutX="70.0" layoutY="123.0" mnemonicParsing="false" onAction="#gotodashboard" style="-fx-background-color: #00796b;" stylesheets="" text="Dashboard" textFill="WHITE" />
+                     <Button fx:id="usersbut" layoutX="74.0" layoutY="161.0" mnemonicParsing="false" onAction="#gotousers" style="-fx-background-color: #00796b;" text="Users" textFill="WHITE" />
+                     <Button fx:id="recipesbut" layoutX="75.0" layoutY="204.0" mnemonicParsing="false" onAction="#gotorecipes" style="-fx-background-color: #00796b;" text="Recipes" textFill="WHITE" />
+                     <Button fx:id="restaubut" layoutX="71.0" layoutY="246.0" mnemonicParsing="false" onAction="#gotorestau" style="-fx-background-color: #00796b;" text="Restaurants" textFill="WHITE" />
+                     <Button fx:id="campaignbut" layoutX="73.0" layoutY="283.0" mnemonicParsing="false" onAction="#gotocampaign" style="-fx-background-color: #00796b;" text="Campaign" textFill="WHITE" />
+                     <Button fx:id="logoutbut" layoutX="61.0" layoutY="547.0" mnemonicParsing="false" onAction="#gotologin" style="-fx-background-color: #00796b;" text="Log Out" textFill="WHITE" />
+                     <ImageView fitHeight="30.0" fitWidth="39.0" layoutX="21.0" layoutY="161.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@images/icons8-utilisateur-50.png" />
+                        </image>
+                     </ImageView>
+                  </children>
+               </AnchorPane>
+               <Pane layoutX="219.0" layoutY="21.0">
+                  <children>
+                     <Separator layoutX="362.0" layoutY="3.0" orientation="VERTICAL" prefHeight="52.0" prefWidth="7.0" />
+                     <ImageView fitHeight="52.0" fitWidth="54.0" layoutX="439.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@images/manager.png" />
+                        </image>
+                     </ImageView>
+                     <Label layoutY="12.0" prefHeight="62.0" prefWidth="154.0" text="Welcom , Max" textFill="#0a6b33">
+                        <font>
+                           <Font size="23.0" />
+                        </font>
+                     </Label>
+                     <Label layoutX="371.0" layoutY="28.0" text="Manager" textFill="#867878" />
+                     <Label layoutX="374.0" layoutY="3.0" text="Max" />
+                     <ImageView fitHeight="23.0" fitWidth="20.0" layoutX="329.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@images/bouton-notifications.png" />
+                        </image>
+                     </ImageView>
+                  </children>
+               </Pane>
+                  <Pane fx:id="restaurantPane" layoutX="199.0" layoutY="203.0" prefHeight="392.0" prefWidth="154.0" style="-fx-background-color: #00796b;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="88.0" layoutX="37.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/food-delivery.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="restaurants" layoutX="9.0" layoutY="271.0" mnemonicParsing="false" onAction="#showrestau" prefHeight="62.0" prefWidth="136.0" style="-fx-background-color: #00796b;" text="Restaurants">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="reservationPane" layoutX="375.0" layoutY="203.0" prefHeight="392.0" prefWidth="154.0" style="-fx-background-color: #00796b; -fx-border-radius: 33;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="98.0" layoutX="37.0" layoutY="123.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/reservation.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="reservations" layoutX="9.0" layoutY="273.0" mnemonicParsing="false" onAction="#showreserv" prefHeight="62.0" prefWidth="136.0" style="-fx-background-color: #00796b;" text="Reservation">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="statisticsPane" layoutX="558.0" layoutY="203.0" prefHeight="392.0" prefWidth="154.0" style="-fx-background-color: #00796b;">
+                     <children>
+                        <Button fx:id="statistics" layoutX="9.0" layoutY="275.0" mnemonicParsing="false" onAction="#showstat" prefHeight="62.0" prefWidth="136.0" style="-fx-background-color: #00796b;" text="Statistics">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="37.0" layoutY="123.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/stats.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Text fill="#686868" layoutX="296.0" layoutY="156.0" styleClass="main_title" text="How Can We help you !">
+                     <font>
+                        <Font name="Trebuchet MS" size="30.0" />
+                     </font>
+                  </Text>
+            </children>
+         </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

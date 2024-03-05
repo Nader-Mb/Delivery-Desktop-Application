@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="810.0" prefWidth="1315.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.HelloController">
+  <children>
+    <BorderPane layoutX="6.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <left>
+        <VBox prefHeight="810.0" prefWidth="286.0" styleClass="right-bar" stylesheets="@style.css" BorderPane.alignment="CENTER">
+          <children>
+            <HBox alignment="CENTER" prefHeight="162.0" prefWidth="435.0">
+              <children>
+                <Label prefHeight="50.0" prefWidth="113.0" text="Green" textFill="WHITE">
+                  <font>
+                    <Font name="Cambria Bold" size="40.0" />
+                  </font>
+                </Label>
+                <Label text="Menu" textFill="WHITE">
+                  <font>
+                    <Font name="Cambria" size="40.0" />
+                  </font>
+                </Label>
+              </children>
+            </HBox>
+                  <Pane prefHeight="118.0" prefWidth="335.0" />
+                  <VBox prefHeight="163.0" prefWidth="435.0">
+                     <children>
+                        <Button mnemonicParsing="false" prefHeight="53.0" prefWidth="460.0" styleClass="nav-btn" stylesheets="@style.css" text="  Dashboard">
+                           <graphic>
+                              <ImageView fitHeight="27.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/laptop.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin></Button>
+                        <Button fx:id="btnUsers" mnemonicParsing="false" prefHeight="53.0" prefWidth="460.0" styleClass="nav-btn" stylesheets="@style.css" text="  Users">
+                           <graphic>
+                              <ImageView fitHeight="27.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/user.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btnRecipes" mnemonicParsing="false" prefHeight="53.0" prefWidth="460.0" styleClass="nav-btn" stylesheets="@style.css" text="  Recipes">
+                           <graphic>
+                              <ImageView fitHeight="27.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/recipes.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btnRestaurants" mnemonicParsing="false" prefHeight="53.0" prefWidth="460.0" styleClass="nav-btn" stylesheets="@style.css" text="  Restaurants">
+                           <graphic>
+                              <ImageView fitHeight="27.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/restaurant.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btnCampaign" mnemonicParsing="false" prefHeight="53.0" prefWidth="460.0" styleClass="nav-btn" stylesheets="@style.css" text="  Campaign">
+                           <graphic>
+                              <ImageView fitHeight="27.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/campagne.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btnCabinet" mnemonicParsing="false" onAction="#switchForm" prefHeight="53.0" prefWidth="460.0" styleClass="nav-btn" stylesheets="@style.css" text="  Cabinet">
+                           <graphic>
+                              <ImageView fitHeight="27.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/cabinet.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Button fx:id="btnRdv" mnemonicParsing="false" onAction="#switchForm" prefHeight="53.0" prefWidth="460.0" styleClass="nav-btn" stylesheets="@style.css" text="  Rendez-Vous">
+                           <graphic>
+                              <ImageView fitHeight="27.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/rendez-vous.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                     </children>
+                  </VBox>
+                  <Pane prefHeight="169.0" prefWidth="286.0" />
+                  <Button mnemonicParsing="false" prefHeight="43.0" prefWidth="286.0" styleClass="nav-btn" stylesheets="@style.css" text="  Log Out">
+                     <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/logout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+          </children>
+        </VBox>
+      </left>
+      <center>
+        <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+          <children>
+                  <Pane prefHeight="43.0" prefWidth="880.0" />
+            <HBox prefHeight="100.0" prefWidth="200.0">
+              <children>
+                <Pane prefHeight="84.0" prefWidth="96.0" />
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="380.0" styleClass="free-delivery-card" stylesheets="@style.css">
+                  <children>
+                    <VBox alignment="CENTER" prefHeight="100.0" prefWidth="214.0">
+                      <children>
+                        <Label prefHeight="29.0" prefWidth="190.0" text="Réservez votre" textFill="#878787">
+                          <font>
+                            <Font name="Cambria Bold" size="18.0" />
+                          </font>
+                        </Label>
+                        <Label prefHeight="16.0" prefWidth="190.0" text="rendez-vous en un clic." textFill="#878787">
+                          <font>
+                            <Font name="Cambria" size="15.0" />
+                          </font>
+                        </Label>
+                      </children>
+                    </VBox>
+                    <ImageView fitHeight="49.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+                      <image>
+                        <Image url="@img/rdv.png" />
+                      </image>
+                    </ImageView>
+                  </children>
+                </HBox>
+                <Pane prefHeight="84.0" prefWidth="96.0" HBox.hgrow="ALWAYS" />
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="376.0" styleClass="shopping-online-card" stylesheets="@style.css">
+                  <children>
+                    <VBox alignment="CENTER" prefHeight="100.0" prefWidth="227.0">
+                      <children>
+                        <Label prefHeight="30.0" prefWidth="270.0" text="Votre santé, notre priorité" textFill="#878787">
+                          <font>
+                            <Font name="Cambria Bold" size="18.0" />
+                          </font>
+                        </Label>
+                        <Label prefHeight="20.0" prefWidth="250.0" text="Gagnez du temps, prenez soin de vous" textFill="#878787">
+                          <font>
+                            <Font name="Cambria" size="14.0" />
+                          </font>
+                        </Label>
+                      </children>
+                    </VBox>
+                              <Pane prefHeight="100.0" prefWidth="14.0" />
+                    <ImageView fitHeight="49.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                      <image>
+                        <Image url="@img/health.png" />
+                      </image>
+                    </ImageView>
+                  </children>
+                </HBox>
+                <Pane prefHeight="84.0" prefWidth="96.0" />
+              </children>
+              <VBox.margin>
+                <Insets left="20.0" right="20.0" top="10.0" />
+              </VBox.margin>
+            </HBox>
+                  <Pane prefHeight="35.0" prefWidth="880.0" />
+                  <AnchorPane fx:id="view_pages" prefHeight="614.0" prefWidth="880.0" />
+          </children>
+        </VBox>
+      </center>
+    </BorderPane>
+  </children>
+</AnchorPane>

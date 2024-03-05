@@ -1,0 +1,11 @@
+.selected{
+    -fx-background-color:  #f3f3f3;
+    -fx-background-radius: 50 0 0 50 ;
+
+
+}
+
+.mouse-moved:hover{
+    -fx-border-color: #e1e0ce;
+    -fx-border-radius: 50 0 0 50  ;
+    -fx-border-width: 5 }

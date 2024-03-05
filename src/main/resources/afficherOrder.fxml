@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="610.0" prefWidth="1088.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.afficherOrderController">
+    <children>
+        <AnchorPane layoutX="180.0" layoutY="62.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="541.0" prefWidth="906.0" style="-fx-background-color: F5F5F5;">
+            <children>
+                <Label layoutX="14.0" layoutY="-1.0" prefHeight="38.0" prefWidth="150.0" text="Show orders " textFill="#00976b">
+                    <font>
+                        <Font name="System Bold Italic" size="25.0" />
+                    </font>
+                </Label>
+                <Label fx:id="confirmationAjoutCommande" layoutX="469.0" layoutY="437.0" prefHeight="30.0" prefWidth="135.0" />
+            <VBox layoutX="70.0" layoutY="88.0" prefHeight="190.0" prefWidth="732.0">
+               <children>
+                  <HBox prefHeight="38.0" prefWidth="575.0">
+                     <children>
+                        <Label prefHeight="38.0" prefWidth="75.0" text="Code" />
+                        <Label prefHeight="46.0" prefWidth="87.0" text="Name" />
+                        <Label alignment="CENTER" prefHeight="44.0" prefWidth="73.0" text="Date" />
+                        <Label alignment="CENTER" prefHeight="35.0" prefWidth="115.0" text="Dish" textAlignment="CENTER" />
+                        <Label alignment="CENTER" contentDisplay="RIGHT" prefHeight="35.0" prefWidth="125.0" text="Total_Price" />
+                        <Label alignment="CENTER" prefHeight="37.0" prefWidth="137.0" text="Adress" />
+                     </children>
+                  </HBox>
+                  <ListView fx:id="afficherCommandeLV" prefHeight="153.0" prefWidth="717.0" />
+               </children>
+            </VBox>
+            <Button fx:id="cc" layoutX="604.0" layoutY="390.0" mnemonicParsing="false" onAction="#afficherAddOrder" prefHeight="31.0" prefWidth="78.0" style="-fx-background-color: #00796B;" text="Add" />
+            <Button fx:id="updatecommz" layoutX="403.0" layoutY="390.0" mnemonicParsing="false" onAction="#modifier" prefHeight="31.0" prefWidth="74.0" style="-fx-background-color: #00796B;" text="Update" />
+            <Button fx:id="delitafficher" layoutX="202.0" layoutY="390.0" mnemonicParsing="false" onAction="#delet" prefHeight="31.0" prefWidth="73.0" style="-fx-background-color: #ff0000;" text="Delete" />
+            <ComboBox fx:id="idSort" layoutX="209.0" layoutY="36.0" onAction="#sortCommand" prefWidth="150.0" promptText="Sort With" />
+            <TextField fx:id="idSearch" layoutX="537.0" layoutY="36.0" onKeyTyped="#searchCommande" promptText="SEARCH" />
+            <Label layoutX="54.0" layoutY="41.0" text="Filter the order list " textFill="#69cf9c">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="21.0" fitWidth="25.0" layoutX="126.0" layoutY="-13.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="21.0" fitWidth="25.0" layoutX="181.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/image/icons8-filter-50 (1).png" />
+               </image>
+            </ImageView>
+            <ComboBox fx:id="idSearchWith" layoutX="378.0" layoutY="36.0" onAction="#sortCommand" prefWidth="150.0" promptText="Search With" />
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="-7.0" prefHeight="610.0" prefWidth="187.0" style="-fx-background-color: #00796b;">
+            <children>
+                <ImageView fitHeight="52.0" fitWidth="61.0" layoutX="19.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@/image/logo-no-background.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="31.0" fitWidth="41.0" layoutX="20.0" layoutY="123.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@/image/icons8-macbook-de-performance-100.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="30.0" fitWidth="31.0" layoutX="21.0" layoutY="204.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@/image/iconizer-livre-de-recettes.png" />
+                    </image>
+                </ImageView>
+                <Label layoutX="68.0" layoutY="251.0" textFill="WHITE" />
+                <ImageView fitHeight="31.0" fitWidth="35.0" layoutX="21.0" layoutY="300.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@/image/iconizer-don.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="30.0" fitWidth="35.0" layoutX="18.0" layoutY="547.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@/image/icons8-sortie-100.png" />
+                    </image>
+                </ImageView>
+                <Button layoutX="63.0" layoutY="123.0" mnemonicParsing="false" style="-fx-background-color: #00796B;" text="Home" textFill="WHITE" />
+                <Button fx:id="addOrderHomeButt" layoutX="72.0" layoutY="123.0" mnemonicParsing="false" style="-fx-background-color: #00796B;" text="Home" textFill="WHITE" />
+                <Button fx:id="addOrderOrdersButt" layoutX="68.0" layoutY="164.0" mnemonicParsing="false" style="-fx-background-color: #00796B;" text="Orders " textFill="#82391a" />
+                <ImageView fitHeight="52.0" fitWidth="41.0" layoutX="16.0" layoutY="154.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@/image/icons8-lunch-64 (1).png" />
+                    </image>
+                </ImageView>
+                <Button fx:id="addOrderRecipesButt" layoutX="72.0" layoutY="204.0" mnemonicParsing="false" style="-fx-background-color: #00796B;" text="Recipes" textFill="WHITE" />
+                <Button fx:id="addOrderDeliveryButt" layoutX="71.0" layoutY="246.0" mnemonicParsing="false" onAction="#delvrygo" style="-fx-background-color: #00796B;" text="Delivery" textFill="WHITE" />
+                <ImageView fitHeight="31.0" fitWidth="54.0" layoutX="24.0" layoutY="246.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@/image/icons8-delivery-50 (1).png" />
+                    </image>
+                </ImageView>
+                <Button fx:id="addOrderLogOutButt" layoutX="64.0" layoutY="547.0" mnemonicParsing="false" style="-fx-background-color: #00796B;" text="LogOut " textFill="WHITE" />
+                <Button fx:id="addOrderCompaignButt1" layoutX="74.0" layoutY="300.0" mnemonicParsing="false" style="-fx-background-color: #00796B;" text="Campaign" textFill="WHITE" />
+            </children>
+        </AnchorPane>
+        <Label layoutX="877.0" layoutY="15.0" text="Mourad Ali " />
+        <Label layoutX="868.0" layoutY="36.0" text="Restaurant Manager  " textFill="#867878" />
+        <Label layoutX="188.0" layoutY="25.0" text="Hello,Mourad" textFill="#5e0707" />
+        <Separator layoutX="861.0" layoutY="10.0" orientation="VERTICAL" prefHeight="52.0" prefWidth="7.0" />
+        <ImageView fitHeight="31.0" fitWidth="37.0" layoutX="830.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@/image/bouton-notifications.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="88.0" fitWidth="72.0" layoutX="1016.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@/image" />
+            </image>
+        </ImageView>
+    </children>
+</AnchorPane>

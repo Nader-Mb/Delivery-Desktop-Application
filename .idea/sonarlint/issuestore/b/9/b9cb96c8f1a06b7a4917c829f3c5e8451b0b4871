@@ -1,0 +1,9 @@
+
+a	java:S112¿"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+x	java:S116?"^Rename this field "ModifyCampainButton" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(È¯›şÿÿÿÿ
+n	java:S116E"TRename this field "GoalField" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘ÆòŞşÿÿÿÿ
+W
+java:S1075^"ARefactor your code to get this URI from a customizable parameter.(¹ÓãÉ
+E	java:S106g"+Replace this use of System.out by a logger.(ëÄãïıÿÿÿÿ
+I
+java:S1172‰"2Remove this unused method parameter "actionEvent".(€¹°Â

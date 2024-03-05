@@ -1,0 +1,9 @@
+
+g	java:S112<"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ìáç£à1
+L	java:S106C"+Replace this use of System.out by a logger.(áøã­ùÿÿÿÿ8‰âç£à1
+H
+java:S1874D"+Remove this use of "URL"; it is deprecated.(áÄ§¡8Šâç£à1
+O
+java:S1068J"3Remove this unused "campaignService" private field.(ˆ§½~8Œâç£à1
+[
+java:S1068K"9Remove this unused "addCampaignController" private field.(ô³áÿÿÿÿÿ8âç£à1

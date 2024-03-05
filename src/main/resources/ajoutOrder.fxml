@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="610.0" prefWidth="1088.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.addOrderController">
+<children>
+    <AnchorPane layoutX="180.0" layoutY="73.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="541.0" prefWidth="906.0" style="-fx-background-color: F5F5F5;">
+        <children>
+            <Label layoutX="317.0" layoutY="246.0" text="Quantity *" />
+            <TextField fx:id="priceCTextField" layoutX="26.0" layoutY="332.0" prefHeight="31.0" prefWidth="201.0" promptText="enter price">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </TextField>
+            <Button fx:id="addOrderAddButt" layoutX="372.0" layoutY="436.0" mnemonicParsing="false" onAction="#addOrder" prefHeight="31.0" prefWidth="81.0" style="-fx-background-color: #00796b;" text="Add" />
+            <Label layoutX="325.0" layoutY="167.0" text="Time" />
+            <TextField fx:id="timeCommande" layoutX="411.0" layoutY="162.0" prefHeight="30.0" prefWidth="199.0" promptText="enter the exact Time HH:MM">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </TextField>
+            <Label layoutX="7.0" layoutY="4.0" text="Add order">
+                <font>
+                    <Font name="System Bold" size="15.0" />
+                </font>
+            </Label>
+            <Button fx:id="addOrderCancelButt" layoutX="244.0" layoutY="436.0" mnemonicParsing="false" onAction="#cancel" prefHeight="31.0" prefWidth="81.0" style="-fx-background-color: #e91e63;" text="Cancel" />
+            <Label layoutX="38.0" layoutY="58.0" text="Client" />
+            <ComboBox fx:id="clientCombobox" layoutX="26.0" layoutY="79.0" prefWidth="150.0" />
+            <Label layoutX="43.0" layoutY="133.0" text="Order Date " />
+            <DatePicker fx:id="dateCommande" layoutX="26.0" layoutY="161.0" />
+            <ComboBox fx:id="dishCombobox" layoutX="26.0" layoutY="241.0" prefWidth="150.0" />
+            <Label layoutX="42.0" layoutY="213.0" text="Dish" />
+            <Label layoutX="41.0" layoutY="300.0" text="Price" />
+            <TextField fx:id="quantite" layoutX="404.0" layoutY="242.0" prefHeight="30.0" prefWidth="200.0" promptText="enter the quantity">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label fx:id="confirmationAjoutCommande" layoutX="469.0" layoutY="437.0" prefHeight="30.0" prefWidth="135.0" />
+        </children>
+    </AnchorPane>
+    <AnchorPane layoutX="-7.0" prefHeight="610.0" prefWidth="187.0" style="-fx-background-color: #00796b;">
+        <children>
+            <ImageView fitHeight="52.0" fitWidth="61.0" layoutX="19.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@/image/logo-no-background.png" />
+                </image>
+            </ImageView>
+            <ImageView fitHeight="31.0" fitWidth="41.0" layoutX="20.0" layoutY="123.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@/image/icons8-macbook-de-performance-100.png" />
+                </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="31.0" layoutX="21.0" layoutY="204.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@/image/iconizer-livre-de-recettes.png" />
+                </image>
+            </ImageView>
+            <Label layoutX="68.0" layoutY="251.0" textFill="WHITE" />
+            <ImageView fitHeight="31.0" fitWidth="35.0" layoutX="21.0" layoutY="300.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@/image/iconizer-don.png" />
+                </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="35.0" layoutX="18.0" layoutY="547.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@/image/icons8-sortie-100.png" />
+                </image>
+            </ImageView>
+            <Button layoutX="63.0" layoutY="123.0" mnemonicParsing="false" style="-fx-background-color: #00796B;" text="Home" textFill="WHITE" />
+            <Button fx:id="addOrderHomeButt" layoutX="72.0" layoutY="123.0" mnemonicParsing="false" style="-fx-background-color: #00796B;" text="Home" textFill="WHITE" />
+            <Button fx:id="addOrderOrdersButt" layoutX="68.0" layoutY="164.0" mnemonicParsing="false" style="-fx-background-color: #00796B;" text="Orders " textFill="#82391a" />
+            <ImageView fitHeight="52.0" fitWidth="41.0" layoutX="16.0" layoutY="154.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@/image/icons8-lunch-64 (1).png" />
+                </image>
+            </ImageView>
+            <Button fx:id="addOrderRecipesButt" layoutX="72.0" layoutY="204.0" mnemonicParsing="false" style="-fx-background-color: #00796B;" text="Recipes" textFill="WHITE" />
+            <Button fx:id="addOrderDeliveryButt" onAction="#afficherDelivery" layoutX="71.0" layoutY="246.0" mnemonicParsing="false" style="-fx-background-color: #00796B;" text="Delivery" textFill="WHITE" />
+            <ImageView fitHeight="31.0" fitWidth="54.0" layoutX="24.0" layoutY="246.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@/image/icons8-delivery-50 (1).png" />
+                </image>
+            </ImageView>
+            <Button fx:id="addOrderLogOutButt" layoutX="64.0" layoutY="547.0" mnemonicParsing="false" style="-fx-background-color: #00796B;" text="LogOut " textFill="WHITE" />
+            <Button fx:id="addOrderCompaignButt1" layoutX="74.0" layoutY="300.0" mnemonicParsing="false" style="-fx-background-color: #00796B;" text="Campaign" textFill="WHITE" />
+        </children>
+    </AnchorPane>
+    <Label layoutX="877.0" layoutY="15.0" text="Mourad Ali " />
+    <Label layoutX="868.0" layoutY="36.0" text="Restaurant Manager  " textFill="#867878" />
+    <Label layoutX="188.0" layoutY="25.0" text="Hello,Mourad" textFill="#5e0707" />
+    <Separator layoutX="861.0" layoutY="10.0" orientation="VERTICAL" prefHeight="52.0" prefWidth="7.0" />
+    <ImageView fitHeight="31.0" fitWidth="37.0" layoutX="830.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@/image/bouton-notifications.png" />
+        </image>
+    </ImageView>
+    <ImageView fitHeight="88.0" fitWidth="72.0" layoutX="1016.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@/image" />
+        </image>
+    </ImageView>
+</children>
+</AnchorPane>

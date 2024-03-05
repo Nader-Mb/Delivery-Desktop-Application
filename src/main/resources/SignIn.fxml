@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="568.0" prefWidth="1088.0" style="-fx-background-color: #8cbb9b;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SignInController">
+   <children>
+      <ImageView fitHeight="575.0" fitWidth="727.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/greenMenu.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="623.0" layoutY="13.0" prefHeight="527.0" prefWidth="380.0" style="-fx-background-color: #FFFFFF;">
+         <children>
+            <Label layoutX="13.0" layoutY="7.0" text="Welcome Back" textFill="#97400a">
+               <font>
+                  <Font name="System Bold" size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="12.0" layoutY="29.0" text="Log In to your Account" />
+            <TextField fx:id="LogInEmail" layoutX="23.0" layoutY="83.0" prefHeight="37.0" prefWidth="332.0" promptText="enter your email" />
+            <Label layoutX="23.0" layoutY="68.0" text="Email">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <TextField fx:id="LogInPassword" layoutX="23.0" layoutY="142.0" prefHeight="37.0" prefWidth="332.0" promptText="enter your password" />
+            <Label layoutX="26.0" layoutY="127.0" text="Password">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <CheckBox fx:id="idRemeberMeLogIn" layoutX="25.0" layoutY="209.0" mnemonicParsing="false" text="Remember me" />
+            <Button fx:id="idButtonLogIn" layoutX="27.0" layoutY="246.0" mnemonicParsing="false" onAction="#cnx" prefHeight="37.0" prefWidth="324.0" style="-fx-background-color: Black;" text="Continue" textFill="WHITE" />
+            <Button fx:id="idGoogleLogIn" layoutX="27.0" layoutY="331.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="324.0" style="-fx-background-color: #e7e7e7;" text="Continue with Google" />
+            <Button fx:id="idFbLogIn" layoutX="27.0" layoutY="374.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="324.0" style="-fx-background-color: #e7e7e7;" text="Continue with facebook" />
+            <Button fx:id="idAppleLogIn" layoutX="27.0" layoutY="419.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="324.0" style="-fx-background-color: #e7e7e7;" text="Continue with Apple" />
+            <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="275.0" layoutY="374.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/icons8-facebook-nouveau-100.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="275.0" layoutY="331.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/icons8-logo-google-100.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="275.0" layoutY="419.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/icons8-mac-os-100.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="92.0" layoutY="475.0" text="new user ?" />
+            <Label layoutX="165.0" layoutY="475.0" text="Sign up here" underline="true">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="179.0" layoutY="297.0" text="OR" />
+            <Button fx:id="idForgotPassword" layoutX="199.0" layoutY="201.0" mnemonicParsing="false" onAction="#oublier" prefHeight="37.0" prefWidth="152.0" style="-fx-background-color: #ffffff;" text="Forgot Password ?" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

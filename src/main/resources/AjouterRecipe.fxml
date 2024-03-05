@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="610.0" prefWidth="1088.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AjouterRecipeController">
+   <children>
+            <AnchorPane layoutX="180.0" layoutY="69.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="541.0" prefWidth="906.0" style="-fx-background-color: F5F5F5;">
+               <children>
+                  <TextField fx:id="tfNameRec" alignment="CENTER" layoutX="192.0" layoutY="58.0" prefHeight="39.0" prefWidth="305.0" promptText="RecipeName" />
+                  <Label layoutX="22.0" layoutY="291.0" text="Select duration of preparation and/or cooking:" textFill="#1b6135" />
+                  <ComboBox fx:id="CombHour" layoutX="387.0" layoutY="285.0" prefHeight="39.0" prefWidth="110.0" promptText="Hour" />
+                  <TextField fx:id="tfServes" alignment="CENTER" layoutX="192.0" layoutY="111.0" prefHeight="40.0" prefWidth="61.0" promptText="Nb" />
+                  <Label layoutX="19.0" layoutY="237.0" text="Make sure to choose the best category for your food, as well as a picture if available." textFill="#1b6135" />
+                  <Label layoutX="22.0" layoutY="157.0" text="Select difficulty level" textFill="#1b6135" />
+                  <RadioButton fx:id="rbEasy" layoutX="213.0" layoutY="157.0" mnemonicParsing="false" onAction="#getDifficultyGr" text="Easy">
+               <toggleGroup>
+                  <ToggleGroup fx:id="difficultyGr" />
+               </toggleGroup></RadioButton>
+                  <RadioButton fx:id="rbAverage" layoutX="312.0" layoutY="157.0" mnemonicParsing="false" onAction="#getDifficultyGr" selected="true" text="Average" toggleGroup="$difficultyGr" />
+                  <RadioButton fx:id="rbDifficult" layoutX="430.0" layoutY="157.0" mnemonicParsing="false" onAction="#getDifficultyGr" text="Difficult" toggleGroup="$difficultyGr" />
+                  <TextArea fx:id="tfDesc" layoutX="22.0" layoutY="330.0" prefHeight="188.0" prefWidth="598.0" text="Please type description here" />
+                  <Label textFill="#00785c">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Button fx:id="ButtSubmitRec" layoutX="689.0" layoutY="444.0" mnemonicParsing="false" onAction="#ajouterRec" text="Submit" />
+            <TextField fx:id="tfURLimg" layoutX="308.0" layoutY="192.0" prefHeight="21.0" prefWidth="235.0" promptText="URL image" />
+                  <ComboBox fx:id="CombCategory" layoutX="19.0" layoutY="192.0" prefHeight="21.0" prefWidth="150.0" promptText="Category" />
+            <ComboBox fx:id="CombMin" layoutX="503.0" layoutY="285.0" prefHeight="39.0" prefWidth="126.0" promptText="Minute" />
+            <Label layoutX="22.0" layoutY="117.0" text="Number of serves:" textFill="#1b6135" />
+            <Label layoutX="22.0" layoutY="64.0" text="Name of the recipe:" textFill="#1b6135" />
+                  <Button fx:id="btCancel" contentDisplay="LEFT" layoutX="14.0" layoutY="21.0" mnemonicParsing="false" onAction="#cancel" prefHeight="39.0" prefWidth="110.0" text=" Cancel">
+                  <graphic>
+                     <ImageView fitHeight="21.0" fitWidth="19.0" layoutX="788.0" layoutY="23.0">
+                     <image>
+                        <Image url="@image/icons8-flèche-gauche-64.png" />
+                     </image>
+                  </ImageView></graphic>
+                  </Button>
+            <Button fx:id="btAddImg" layoutX="179.0" layoutY="192.0" mnemonicParsing="false" onAction="#AddImage" prefHeight="21.0" text="Add Image" />
+               </children>
+            </AnchorPane>
+      <AnchorPane layoutX="-7.0" prefHeight="610.0" prefWidth="187.0" style="-fx-background-color: #00796b;">
+         <children>
+            <ImageView fitHeight="52.0" fitWidth="42.0" layoutX="27.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/icons8-assiette-32.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="65.0" layoutY="128.0" text="Dashboard" textFill="WHITE" />
+            <ImageView fitHeight="31.0" fitWidth="35.0" layoutX="20.0" layoutY="161.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/icons8-utilisateur-50.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="65.0" layoutY="166.0" text="Users" textFill="WHITE" />
+            <ImageView fitHeight="31.0" fitWidth="41.0" layoutX="20.0" layoutY="123.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/icons8-macbook-de-performance-100.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="68.0" layoutY="208.0" text="Recipes" textFill="#82391a" />
+            <ImageView fitHeight="30.0" fitWidth="31.0" layoutX="21.0" layoutY="204.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/livre-de-recettes.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="68.0" layoutY="251.0" text="Restaurants" textFill="WHITE" />
+            <ImageView fitHeight="31.0" fitWidth="37.0" layoutX="21.0" layoutY="246.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/icons8-restaurant-64.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="68.0" layoutY="295.0" text="Campaign" textFill="WHITE" />
+            <ImageView fitHeight="31.0" fitWidth="35.0" layoutX="21.0" layoutY="283.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/iconizer-don.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="35.0" layoutX="18.0" layoutY="547.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/icons8-sortie-100.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="66.0" layoutY="551.0" text="Log Out" textFill="WHITE" />
+            <Label layoutX="77.0" layoutY="14.0" text="GREEN " textFill="#034a03">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="81.0" layoutY="40.0" text="MENU" textFill="#d1dad1">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label layoutX="907.0" layoutY="15.0" text="Mohsen Ben Khlifa" />
+      <Label layoutX="987.0" layoutY="36.0" text="Admin" textFill="#867878" />
+      <Label layoutX="188.0" layoutY="25.0" text="Hello,Mohsen" textFill="#5e0707" />
+      <Separator layoutX="888.0" layoutY="10.0" orientation="VERTICAL" prefHeight="52.0" prefWidth="7.0" />
+      <ImageView fitHeight="31.0" fitWidth="37.0" layoutX="842.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/bouton-notifications.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="52.0" fitWidth="54.0" layoutX="1031.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/téléchargement.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

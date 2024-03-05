@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.web.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.StatisticsController">
+
+   <children>
+   
+   <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1005.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+      <children>
+         <Text fill="#00796b" layoutX="202.0" layoutY="54.0" styleClass="main_title" text="Restaurants &amp; Reseervartion Statistics :">
+            <font>
+               <Font name="Trebuchet MS" size="30.0" />
+            </font>
+         </Text>
+         <AnchorPane prefHeight="680.0" prefWidth="187.0" style="-fx-background-color: #00796b;">
+            <children>
+               <ImageView fitHeight="80.0" fitWidth="124.0" layoutX="61.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@images/logo-no-background.png" />
+                  </image>
+               </ImageView>
+               <Label layoutX="65.0" layoutY="128.0" textFill="WHITE" />
+               <Label layoutX="65.0" layoutY="166.0" textFill="#82391a" />
+               <ImageView fitHeight="31.0" fitWidth="41.0" layoutX="20.0" layoutY="123.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@images/icons8-macbook-de-performance-100.png" />
+                  </image>
+               </ImageView>
+               <Label layoutX="68.0" layoutY="208.0" textFill="WHITE" />
+               <ImageView fitHeight="30.0" fitWidth="31.0" layoutX="21.0" layoutY="204.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@images/iconizer-livre-de-recettes.png" />
+                  </image>
+               </ImageView>
+               <Label layoutX="68.0" layoutY="251.0" textFill="WHITE" />
+               <ImageView fitHeight="31.0" fitWidth="37.0" layoutX="21.0" layoutY="246.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@images/icons8-restaurant-64.png" />
+                  </image>
+               </ImageView>
+               <Label layoutX="68.0" layoutY="295.0" textFill="WHITE" />
+               <ImageView fitHeight="31.0" fitWidth="35.0" layoutX="21.0" layoutY="283.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@images/iconizer-don.png" />
+                  </image>
+               </ImageView>
+               <ImageView fitHeight="30.0" fitWidth="35.0" layoutX="18.0" layoutY="547.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@images/icons8-sortie-100.png" />
+                  </image>
+               </ImageView>
+               <Label layoutX="66.0" layoutY="551.0" textFill="WHITE" />
+               <Button fx:id="dashboardbut" layoutX="70.0" layoutY="123.0" mnemonicParsing="false" onAction="#gotodashboard" style="-fx-background-color: #00796b;" stylesheets="" text="Dashboard" textFill="WHITE" />
+               <Button fx:id="usersbut" layoutX="74.0" layoutY="161.0" mnemonicParsing="false" onAction="#gotousers" style="-fx-background-color: #00796b;" text="Users" textFill="WHITE" />
+               <Button fx:id="recipesbut" layoutX="75.0" layoutY="204.0" mnemonicParsing="false" onAction="#gotorecipes" style="-fx-background-color: #00796b;" text="Recipes" textFill="WHITE" />
+               <Button fx:id="restaubut" layoutX="71.0" layoutY="246.0" mnemonicParsing="false" onAction="#gotorestau" style="-fx-background-color: #00796b;" text="Restaurants" textFill="WHITE" />
+               <Button fx:id="campaignbut" layoutX="73.0" layoutY="283.0" mnemonicParsing="false" onAction="#gotocampaign" style="-fx-background-color: #00796b;" text="Campaign" textFill="WHITE" />
+               <Button fx:id="logoutbut" layoutX="61.0" layoutY="547.0" mnemonicParsing="false" onAction="#gotologin" style="-fx-background-color: #00796b;" text="Log Out" textFill="WHITE" />
+               <ImageView fitHeight="30.0" fitWidth="39.0" layoutX="21.0" layoutY="161.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@images/icons8-utilisateur-50.png" />
+                  </image>
+               </ImageView>
+            </children>
+         </AnchorPane>
+            <BarChart fx:id="barChart" barGap="2.0" categoryGap="5.0" layoutX="196.0" layoutY="72.0" prefHeight="210.0" prefWidth="433.0" title="Average Number of Persons per Reservation :" titleSide="BOTTOM">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </BarChart>
+            <Pane fx:id="mapPane" layoutX="554.0" layoutY="350.0" prefHeight="289.0" prefWidth="391.0">
+               <children>
+                  <WebView fx:id="mapWebView" prefHeight="289.0" prefWidth="391.0" />
+               </children>
+            </Pane>
+            <Text fill="#00796b" layoutX="202.0" layoutY="343.0" styleClass="main_title" text="Our Locations :">
+               <font>
+                  <Font name="Trebuchet MS" size="30.0" />
+               </font>
+            </Text>
+            <ListView fx:id="addressListView" layoutX="217.0" layoutY="387.0" prefHeight="250.0" prefWidth="315.0" />
+            <ImageView fitHeight="158.0" fitWidth="187.0" layoutX="649.0" layoutY="82.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/STATTSSSS.png" />
+               </image>
+            </ImageView>
+      </children>
+   </AnchorPane>
+   </children>
+</AnchorPane>

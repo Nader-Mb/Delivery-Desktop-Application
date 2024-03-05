@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="610.0" prefWidth="1088.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ModifyCampaignController">
+   <children>
+      <AnchorPane layoutX="-7.0" prefHeight="610.0" prefWidth="187.0" style="-fx-background-color: #00796b;">
+         <children>
+            <ImageView fitHeight="52.0" fitWidth="42.0" layoutX="27.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons8-assiette-32.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="31.0" fitWidth="35.0" layoutX="27.0" layoutY="179.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons8-utilisateur-100.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="31.0" fitWidth="41.0" layoutX="27.0" layoutY="128.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons8-macbook-de-performance-100.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="31.0" layoutX="28.0" layoutY="228.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/iconizer-livre-de-recettes.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="31.0" fitWidth="37.0" layoutX="27.0" layoutY="279.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons8-restaurant-64.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="31.0" fitWidth="35.0" layoutX="27.0" layoutY="328.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/iconizer-don.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="35.0" layoutX="18.0" layoutY="547.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons8-sortie-100.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="66.0" layoutY="551.0" text="Log Out" textFill="WHITE" />
+            <Label layoutX="77.0" layoutY="14.0" text="GREEN " textFill="#034a03">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="81.0" layoutY="40.0" text="MENU" textFill="#d1dad1">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Button layoutY="119.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="187.0" style="-fx-background-color: trancperncy;" styleClass="mouse-moved" stylesheets="@css.css" text="dashBoard" textFill="WHITE" />
+            <Button layoutY="170.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="187.0" style="-fx-background-color: trancperncy;" styleClass="mouse-moved" stylesheets="@css.css" text="Users" textFill="WHITE" />
+            <Button layoutY="218.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="187.0" style="-fx-background-color: trancperncy;" styleClass="mouse-moved" stylesheets="@css.css" text="Recepies" textFill="WHITE" />
+            <Button layoutY="270.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="187.0" style="-fx-background-color: trancperncy;" styleClass="mouse-moved" stylesheets="@css.css" text="Resaurants" textFill="WHITE" />
+            <Button layoutY="318.0" mnemonicParsing="false" onAction="#switchToDisplayAllCampaigns" prefHeight="50.0" prefWidth="187.0" style="-fx-background-color: trancperncy;" styleClass="mouse-moved" stylesheets="@css.css" text="Campaigns" textFill="WHITE" />
+            <Button layoutY="359.0" mnemonicParsing="false" onAction="#switchToDisplayAllDonations" prefHeight="50.0" prefWidth="187.0" style="-fx-background-color: trancperncy;" styleClass="mouse-moved" stylesheets="@css.css" text="Donation" textFill="WHITE" />
+            <ImageView fitHeight="31.0" fitWidth="27.0" layoutX="31.0" layoutY="371.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/image.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Label layoutX="907.0" layoutY="15.0" text="Mohsen Ben Khlifa" />
+      <Label layoutX="987.0" layoutY="36.0" text="Admin" textFill="#867878" />
+      <Label layoutX="188.0" layoutY="25.0" text="Hello,Mohsen" textFill="#5e0707" />
+      <Separator layoutX="888.0" layoutY="10.0" orientation="VERTICAL" prefHeight="52.0" prefWidth="7.0" />
+      <ImageView fitHeight="31.0" fitWidth="37.0" layoutX="842.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/bouton-notifications.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="52.0" fitWidth="54.0" layoutX="1031.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/2017-05-12-11-21-17-540x675.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="239.0" layoutY="103.0" text="Modify a Campaign" textFill="#00796b">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="campaignTitleField" layoutX="300.0" layoutY="160.0" prefHeight="40.0" prefWidth="352.0" promptText="Campaign Title*">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="associationNameField" layoutX="300.0" layoutY="230.0" prefHeight="40.0" prefWidth="352.0" promptText="Assosciation Name*">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="GoalField" layoutX="300.0" layoutY="370.0" prefHeight="40.0" prefWidth="352.0" promptText="Campaign Goal*">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="numberFiled" layoutX="706.0" layoutY="160.0" prefHeight="40.0" prefWidth="352.0" promptText="Mobile Number*">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <ComboBox fx:id="campaignTypeField" layoutX="300.0" layoutY="300.0" prefHeight="36.0" prefWidth="240.0" promptText="Campaign Type" />
+      <TextField fx:id="descriptionField" alignment="TOP_LEFT" layoutX="300.0" layoutY="429.0" prefHeight="156.0" prefWidth="574.0" promptText="Description">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Button fx:id="ModifyCampainButton" layoutX="904.0" layoutY="508.0" mnemonicParsing="false" onAction="#modifyCampaign" prefHeight="27.0" prefWidth="115.0" style="-fx-background-color: #00796b;" text="Modify Campaign" textFill="WHITE" />
+      <Button fx:id="addImage" layoutX="697.0" layoutY="292.0" mnemonicParsing="false" onAction="#addImage" prefHeight="27.0" prefWidth="115.0" style="-fx-background-color: #00796b;" text="Add Image" textFill="WHITE" />
+      <ImageView fx:id="imageField" fitHeight="150.0" fitWidth="200.0" layoutX="842.0" layoutY="231.0" pickOnBounds="true" preserveRatio="true" />
+      <Separator layoutX="182.0" layoutY="134.0" prefHeight="2.0" prefWidth="902.0" />
+      <ImageView fitHeight="30.0" fitWidth="31.0" layoutX="191.0" layoutY="62.0" onMouseClicked="#switchToDisplayAllCampaigns" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/courbe-de-la-fleche-de-retour-pointant-vers-la-gauche.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

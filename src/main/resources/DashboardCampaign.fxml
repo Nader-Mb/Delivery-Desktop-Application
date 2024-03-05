@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="640.0" prefWidth="1031.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.DashboardControllerCampaign">
+    <children>
+        <AnchorPane layoutX="221.0" layoutY="8.0">
+            <children>
+                <PieChart fx:id="pieChart" prefHeight="288.0" prefWidth="482.0" />
+                <Label layoutX="162.0" text="Statistics" textFill="#1f4e79">
+                    <font>
+                        <Font name="System Bold" size="24.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="492.0" layoutY="332.0" prefHeight="260.0" prefWidth="485.0">
+            <children>
+                <PieChart fx:id="pieChart2" prefHeight="273.0" prefWidth="525.0" />
+                <Label layoutX="262.0" layoutY="13.0" text="Statistics" textFill="#1f4e79">
+                    <font>
+                        <Font name="System Bold" size="24.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+      <AnchorPane layoutX="-3.0" layoutY="-2.0" prefHeight="646.0" prefWidth="193.0" style="-fx-background-color: #00796b;">
+         <children>
+            <ImageView fitHeight="52.0" fitWidth="42.0" layoutX="27.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons8-assiette-32.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="31.0" fitWidth="35.0" layoutX="27.0" layoutY="179.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons8-utilisateur-100.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="31.0" fitWidth="41.0" layoutX="27.0" layoutY="128.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons8-macbook-de-performance-100.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="31.0" layoutX="28.0" layoutY="228.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/iconizer-livre-de-recettes.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="31.0" fitWidth="37.0" layoutX="27.0" layoutY="279.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons8-restaurant-64.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="31.0" fitWidth="35.0" layoutX="27.0" layoutY="328.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/iconizer-don.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="35.0" layoutX="18.0" layoutY="547.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons8-sortie-100.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="66.0" layoutY="551.0" text="Log Out" textFill="WHITE" />
+            <Label layoutX="77.0" layoutY="14.0" text="GREEN " textFill="#034a03">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="81.0" layoutY="40.0" text="MENU" textFill="#d1dad1">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Button layoutY="119.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="187.0" style="-fx-background-color: trancperncy;" styleClass="mouse-moved" stylesheets="@css.css" text="dashBoard" textFill="WHITE" />
+            <Button layoutY="170.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="187.0" style="-fx-background-color: trancperncy;" styleClass="mouse-moved" stylesheets="@css.css" text="Users" textFill="WHITE" />
+            <Button layoutY="218.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="187.0" style="-fx-background-color: trancperncy;" styleClass="mouse-moved" stylesheets="@css.css" text="Recepies" textFill="WHITE" />
+            <Button layoutY="270.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="187.0" style="-fx-background-color: trancperncy;" styleClass="mouse-moved" stylesheets="@css.css" text="Resaurants" textFill="WHITE" />
+            <Button layoutY="318.0" mnemonicParsing="false" onAction="#switchToDisplayAllCampaigns" prefHeight="50.0" prefWidth="187.0" style="-fx-background-color: trancperncy;" styleClass="mouse-moved" stylesheets="@css.css" text="Campaigns" textFill="WHITE" />
+            <Button layoutY="359.0" mnemonicParsing="false" onAction="#switchToDisplayAllDonations" prefHeight="50.0" prefWidth="187.0" style="-fx-background-color: trancperncy;" styleClass="mouse-moved" stylesheets="@css.css" text="Donation" textFill="WHITE" />
+            <ImageView fitHeight="31.0" fitWidth="27.0" layoutX="31.0" layoutY="371.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/image.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="29.0" fitWidth="31.0" layoutX="192.0" layoutY="5.0" onMouseClicked="#switchToDisplayAllCampaigns" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/courbe-de-la-fleche-de-retour-pointant-vers-la-gauche.png" />
+         </image>
+      </ImageView>
+    </children>
+</AnchorPane>

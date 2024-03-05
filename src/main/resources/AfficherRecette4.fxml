@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AfficherRecipeController">
+    <children>
+        <AnchorPane layoutX="180.0" layoutY="69.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="541.0" prefWidth="906.0" style="-fx-background-color: F5F5F5;">
+            <children>
+                <ListView fx:id="lvRec" layoutX="31.0" layoutY="65.0" onMouseClicked="#afficheDetailsRec" prefHeight="370.0" prefWidth="291.0" style="-fx-background-color: #eedaaa;" />
+                <Label layoutX="31.0" layoutY="14.0" text="List of recipes" textFill="#4f8647">
+               <font>
+                  <Font name="Baskerville Old Face" size="35.0" />
+               </font></Label>
+                <Label fx:id="lbRecDet" layoutX="399.0" layoutY="115.0" prefHeight="156.0" prefWidth="377.0" style="-fx-background-color: #f4cf97;" />
+                <Button fx:id="btAjRec" layoutX="458.0" layoutY="458.0" mnemonicParsing="false" onAction="#MoveToAjoutRec" prefHeight="31.0" text="Add" textFill="#17864b">
+                    <graphic>
+                <ImageView fitHeight="21.0" fitWidth="19.0" layoutX="788.0" layoutY="23.0">
+                    <image>
+                        <Image url="@image/icons8-ajouter-16.png" />
+                    </image>
+                </ImageView></graphic></Button>
+                <Button fx:id="btModRec" layoutX="545.0" layoutY="458.0" mnemonicParsing="false" onAction="#onModifierRec" prefHeight="31.0" text="Modify" textFill="#8c7745">
+                    <graphic>
+                        <ImageView fitHeight="21.0" fitWidth="19.0" layoutX="788.0" layoutY="23.0">
+                            <image>
+                                <Image url="@image/icons8-modifier-64.png" />
+                            </image>
+                        </ImageView></graphic></Button>
+                <Button fx:id="btDelRec" layoutX="656.0" layoutY="458.0" mnemonicParsing="false" onAction="#OnDeleteRec" prefHeight="31.0" text="Delete" textFill="#bf0b0b">
+                    <graphic>
+                        <ImageView fitHeight="21.0" fitWidth="19.0" layoutX="788.0" layoutY="23.0">
+                            <image>
+                                <Image url="@image/icons8-supprimer-24.png" />
+                            </image>
+                        </ImageView></graphic></Button>
+                <ImageView fx:id="imgVRec" fitHeight="156.0" fitWidth="181.0" layoutX="399.0" layoutY="279.0" pickOnBounds="true" preserveRatio="true" />
+                <Button fx:id="btPrintRec" layoutX="363.0" layoutY="458.0" mnemonicParsing="false" onAction="#PrintRecAction" prefHeight="31.0" text="Print">
+                    <graphic>
+                        <ImageView fitHeight="21.0" fitWidth="19.0" layoutX="788.0" layoutY="23.0">
+                            <image>
+                                <Image url="@image/icons8-pdf-2-16.png" />
+                            </image>
+                        </ImageView></graphic></Button>
+            <Label fx:id="lbIngDet" layoutX="580.0" layoutY="279.0" prefHeight="110.0" prefWidth="195.0" />
+            <Button fx:id="btSearch" layoutX="808.0" layoutY="67.0" mnemonicParsing="false" onAction="#searchRecAction" prefHeight="32.0" prefWidth="34.0">
+                <graphic>
+                    <ImageView fitHeight="21.0" fitWidth="19.0" layoutX="788.0" layoutY="23.0">
+                        <image>
+                            <Image url="@image/icons8-chercher-100.png" />
+                        </image>
+                    </ImageView></graphic></Button>
+            <ComboBox fx:id="CombCategory" layoutX="345.0" layoutY="67.0" prefHeight="39.0" prefWidth="139.0" promptText="Category" />
+            <ComboBox fx:id="CombDifficulty" layoutX="498.0" layoutY="67.0" prefHeight="39.0" prefWidth="139.0" promptText="Difficulty" />
+            <TextField fx:id="tfSearchName" layoutX="649.0" layoutY="67.0" prefHeight="39.0" prefWidth="149.0" promptText="Name" />
+            <Button fx:id="btSort" layoutX="205.0" layoutY="458.0" mnemonicParsing="false" onAction="#Sort_Action" prefHeight="31.0">
+                <graphic>
+                    <ImageView fitHeight="21.0" fitWidth="19.0" layoutX="788.0" layoutY="23.0">
+                        <image>
+                            <Image url="@image/icons8-tri-60.png" />
+                        </image>
+                    </ImageView></graphic></Button>
+            <ComboBox fx:id="CombSortBy" layoutX="66.0" layoutY="458.0" prefHeight="31.0" prefWidth="125.0" promptText="Sort By" />
+            <Separator layoutX="347.0" layoutY="452.0" orientation="VERTICAL" prefHeight="52.0" prefWidth="7.0" />
+            <Button fx:id="btInvSort" layoutX="254.0" layoutY="458.0" mnemonicParsing="false" onAction="#InverseSort_Action" prefHeight="31.0">
+                <graphic>
+                    <ImageView fitHeight="21.0" fitWidth="19.0" layoutX="788.0" layoutY="23.0">
+                        <image>
+                            <Image url="@image/icons8-flèches-de-tri-50.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+            </children></AnchorPane>
+        <AnchorPane layoutX="-7.0" prefHeight="610.0" prefWidth="187.0" style="-fx-background-color: #00796b;">
+            <children>
+                <ImageView fitHeight="52.0" fitWidth="42.0" layoutX="27.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@image/icons8-assiette-32.png" />
+                    </image>
+                </ImageView>
+                <Label layoutX="65.0" layoutY="128.0" text="Dashboard" textFill="WHITE" />
+                <ImageView fitHeight="31.0" fitWidth="35.0" layoutX="20.0" layoutY="161.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@image/icons8-utilisateur-50.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="31.0" fitWidth="41.0" layoutX="20.0" layoutY="123.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@image/icons8-macbook-de-performance-100.png" />
+                    </image>
+                </ImageView>
+                <Label layoutX="68.0" layoutY="208.0" text="Recipes" textFill="#82391a" />
+                <ImageView fitHeight="30.0" fitWidth="31.0" layoutX="21.0" layoutY="204.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@image/livre-de-recettes.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="31.0" fitWidth="37.0" layoutX="21.0" layoutY="246.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@image/icons8-restaurant-64.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="31.0" fitWidth="35.0" layoutX="21.0" layoutY="283.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@image/iconizer-don.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="30.0" fitWidth="35.0" layoutX="18.0" layoutY="547.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@image/icons8-sortie-100.png" />
+                    </image>
+                </ImageView>
+                <Label layoutX="66.0" layoutY="551.0" text="Log Out" textFill="WHITE" />
+                <Label layoutX="77.0" layoutY="14.0" text="GREEN " textFill="#034a03">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </Label>
+                <Label layoutX="81.0" layoutY="40.0" text="MENU" textFill="#d1dad1">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </Label>
+            <Button fx:id="btMoveToUsers" layoutX="70.0" layoutY="157.0" mnemonicParsing="false" onAction="#goTousers" style="-fx-background-color: #00796b;" text="Users" textFill="WHITE" />
+            <Button fx:id="btMoveToResto" layoutX="50.0" layoutY="242.0" mnemonicParsing="false" onAction="#goToResto" style="-fx-background-color: #00796b;" text="Restaurants" textFill="WHITE" />
+            <Button fx:id="btMoveToCampaign" layoutX="56.0" layoutY="286.0" mnemonicParsing="false" onAction="#goToCampaign" style="-fx-background-color: #00796b;" text="Campaign" textFill="WHITE" />
+            </children>
+        </AnchorPane>
+        <Label layoutX="907.0" layoutY="15.0" text="Mohsen Ben Khlifa" />
+        <Label layoutX="987.0" layoutY="36.0" text="Admin" textFill="#867878" />
+        <Label layoutX="188.0" layoutY="25.0" text="Hello,Mohsen" textFill="#5e0707" />
+        <Separator layoutX="888.0" layoutY="10.0" orientation="VERTICAL" prefHeight="52.0" prefWidth="7.0" />
+        <ImageView fitHeight="52.0" fitWidth="54.0" layoutX="1031.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@image/téléchargement.jpg" />
+            </image>
+        </ImageView>
+        <Button fx:id="btViewChart" layoutX="336.0" layoutY="17.0" mnemonicParsing="false" onAction="#ChartView_Action" prefHeight="39.0" text="View statistics" />
+      <Button fx:id="btsend" layoutX="724.0" layoutY="17.0" mnemonicParsing="false" onAction="#openSendMail" prefHeight="39.0" prefWidth="149.0" text="  Notify user">
+          <graphic>
+              <ImageView fitHeight="21.0" fitWidth="19.0" layoutX="788.0" layoutY="23.0">
+                  <image>
+                      <Image url="@image/bouton-notifications.png" />
+                  </image>
+              </ImageView>
+         </graphic>
+      </Button>
+    </children>
+</AnchorPane>

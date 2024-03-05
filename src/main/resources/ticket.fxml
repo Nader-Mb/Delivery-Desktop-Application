@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.media.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="640.0" prefWidth="459.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.BeachReservationController">
+   <children>
+      <Button fx:id="print" layoutX="254.0" layoutY="569.0" onAction="#printReservationAsPDF" prefHeight="57.0" prefWidth="127.0" style="-fx-background-color: #00796b;" styleClass="update_button" text="Print">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="cancel" layoutX="68.0" layoutY="569.0" onAction="#cancel" prefHeight="57.0" prefWidth="127.0" style="-fx-background-color: #e91e63;" styleClass="save_button" text="Cancel">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <TextArea fx:id="ticket" prefHeight="562.0" prefWidth="459.0" />
+   </children>
+</AnchorPane>

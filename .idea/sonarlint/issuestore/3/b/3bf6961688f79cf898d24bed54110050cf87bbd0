@@ -1,0 +1,21 @@
+
+h
+java:S1192R"FDefine a constant instead of duplicating this literal "titre" 3 times.(õç°õüÿÿÿÿ8³Úòùß1
+i
+java:S2095_"GUse try-with-resources or close this "Statement" in a "finally" clause.(é°Áµşÿÿÿÿ8øÚòùß1
+q
+java:S2095)"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(½¨“Ğúÿÿÿÿ8øÚòùß1
+q
+java:S2095A"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(½¨“Ğúÿÿÿÿ8øÚòùß1
+q
+java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(½¨“Ğúÿÿÿÿ8ØŠ¿¡à1
+i
+java:S2095J"GUse try-with-resources or close this "Statement" in a "finally" clause.(é°Áµşÿÿÿÿ8ÙŠ¿¡à1
+£
+java:S1186""€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(†È€Âşÿÿÿÿ8ùÚòùß1
+
+java:S11869"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¶öà8ùÚòùß1
+X	java:S1252"<This block of commented-out lines of code should be removed.(­ìûÜ8€Ûòùß1
+]	java:S125W"<This block of commented-out lines of code should be removed.(åÃç•øÿÿÿÿ8…Ûòùß1
+]	java:S125~"<This block of commented-out lines of code should be removed.(åÃç•øÿÿÿÿ8‰Ûòùß1
+M	java:S106ƒ"+Replace this use of System.out by a logger.(ÌŒ¦¬ıÿÿÿÿ8‰Ûòùß1
